@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cecdusvr5ggik"]
+
+[ext_resource type="Script" uid="uid://06wqah7wjdl8" path="res://canvas_layer.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://14765026726_b8a02d3989.jpg" id="2_0e48y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="MarginContainer"]
+script = ExtResource("1_wtcfe")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0e48y")
+metadata/_edit_use_anchors_ = true
