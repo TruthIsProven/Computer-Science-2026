@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c04yylh1bubm4"]
+[gd_scene load_steps=2 format=3 uid="uid://c04yylh1bubm4"]
+
+[ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kenku"]
 
 [node name="In game UI" type="Control"]
 layout_mode = 3
@@ -8,9 +10,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Main Menu" type="MarginContainer" parent="."]
+[node name="popupMenu" type="MarginContainer" parent="."]
+layout_mode = 2
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="popupMenu" type="MarginContainer" parent="Main Menu"]
+[node name="BaseMenu Screen" type="MarginContainer" parent="popupMenu"]
 layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/BaseMenu Screen"]
+layout_mode = 2
+texture = ExtResource("1_kenku")
+region_rect = Rect2(708.693, 36, 22.6582, 24.4557)
+
+[node name="Main Menu" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
