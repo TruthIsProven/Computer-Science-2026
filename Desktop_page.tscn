@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=3 uid="uid://beap7sd2ksqkw"]
+
+[ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_vkltf"]
+[ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://14765026726_b8a02d3989.jpg" id="2_vkltf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hf6wo"]
+texture = ExtResource("1_vkltf")
+region_rect = Rect2(741, 134, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1mhai"]
+texture = ExtResource("1_vkltf")
+region_rect = Rect2(709, 132, 22, 24)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_horizontal_guides_ = [-217.0]
+
+[node name="popupMenu" type="MarginContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BaseMenu Screen" type="MarginContainer" parent="popupMenu"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/BaseMenu Screen"]
+layout_mode = 2
+texture = ExtResource("2_vkltf")
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/BaseMenu Screen/NinePatchRect"]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="buttoncontainer" type="VBoxContainer" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="topbuttoncontainer" type="HBoxContainer" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/topbuttoncontainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1mhai")
+
+[node name="Button2" type="Button" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/topbuttoncontainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1mhai")
+
+[node name="bottombuttoncontainer2" type="HBoxContainer" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/bottombuttoncontainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1mhai")
+
+[node name="Button2" type="Button" parent="popupMenu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/bottombuttoncontainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hf6wo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1mhai")
+
+[node name="separator" type="Control" parent="popupMenu"]
+layout_mode = 2
+mouse_filter = 2
