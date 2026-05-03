@@ -8,17 +8,15 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="MarginContainer"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_wtcfe")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_right = -0.384033
+offset_bottom = -0.216064
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_0e48y")

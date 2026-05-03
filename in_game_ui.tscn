@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c04yylh1bubm4"]
+[gd_scene load_steps=4 format=3 uid="uid://c04yylh1bubm4"]
 
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kenku"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kenku"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(741, 134, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onc8m"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(709, 132, 22, 24)
 
 [node name="In game UI" type="Control"]
 layout_mode = 3
@@ -9,20 +17,104 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="popupMenu" type="MarginContainer" parent="."]
-layout_mode = 2
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 1.5
+anchor_bottom = 1.5
+offset_right = -0.00012207
+offset_bottom = -6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="BaseMenu Screen" type="MarginContainer" parent="popupMenu"]
+[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/BaseMenu Screen"]
+[node name="BaseMenu Screen" type="MarginContainer" parent="popupMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/VBoxContainer/BaseMenu Screen"]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
 texture = ExtResource("1_kenku")
-region_rect = Rect2(708.693, 36, 22.6582, 24.4557)
+region_rect = Rect2(741, 38, 22, 22)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
 
-[node name="Main Menu" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.039
+anchor_right = 0.98
+anchor_bottom = 1.0
+offset_left = 478.0
+offset_top = 220.88
+offset_right = -443.6
+offset_bottom = -272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="buttoncontainer" type="VBoxContainer" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="topbuttoncontainer" type="HBoxContainer" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/topbuttoncontainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_onc8m")
+
+[node name="Button2" type="Button" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/topbuttoncontainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_onc8m")
+
+[node name="bottombuttoncontainer2" type="HBoxContainer" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/bottombuttoncontainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_onc8m")
+
+[node name="Button2" type="Button" parent="popupMenu/VBoxContainer/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/bottombuttoncontainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_onc8m")
+
+[node name="separator" type="Control" parent="popupMenu"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
