@@ -75,24 +75,28 @@ theme_override_constants/margin_bottom = 15
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Separator/MarginContainer" unique_id=1552434026]
 layout_mode = 2
-split_offsets = PackedInt32Array(0, 0, 0)
+split_offsets = PackedInt32Array(23, 58, 93)
 drag_area_margin_begin = 5
 drag_area_margin_end = 5
 drag_area_offset = 5
+split_offset = 23
 
-[node name="New Game" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1209329723]
+[node name="New Game" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1386775879]
 layout_mode = 2
-text = "NEW GAME"
+theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
+text = "New Game"
 
-[node name="Load" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1112781613]
+[node name="Load" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1330685971]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Load"
 
-[node name="Settings" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=930405882]
+[node name="Settiings" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1598120318]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Settings"
 
-[node name="Exit" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1386775879]
+[node name="Exit" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=2133667275]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Exit"
