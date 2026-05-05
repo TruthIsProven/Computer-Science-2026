@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cfdb6asv4k30n"]
+
+[ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Desktop_page.tscn" id="1_0f027"]
+[ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Starting Screen.tscn" id="1_2c62f"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_gyfs4"]
+
+[node name="Node2D" type="Node2D" unique_id=2085207291]
+
+[node name="Starting_Screen" parent="." unique_id=1977320705 instance=ExtResource("1_2c62f")]
+anchors_preset = 8
+offset_left = 456.0
+offset_top = 261.0
+offset_right = 456.0
+offset_bottom = 261.0
+size_flags_horizontal = 0
+
+[node name="Desktop" parent="." unique_id=689715138 instance=ExtResource("1_0f027")]
+visible = false
+offset_left = 444.0
+offset_top = 295.0
+offset_right = 444.0
+offset_bottom = 295.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036123436]
+follow_viewport_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=294119819]
+scale = Vector2(960, 540)
+texture = SubResource("ImageTexture_gyfs4")

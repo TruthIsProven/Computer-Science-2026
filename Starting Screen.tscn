@@ -1,9 +1,98 @@
 [gd_scene format=3 uid="uid://bne71w16ru442"]
 
-[node name="Control" type="Control"]
+[ext_resource type="Texture2D" uid="uid://hwfth56gkemy" path="res://Development 2.png" id="1_p7ula"]
+[ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="2_jh178"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udb0d"]
+content_margin_left = 4.0
+texture = ExtResource("2_jh178")
+region_rect = Rect2(139, 12, 106, 122)
+
+[node name="Control" type="Control" unique_id=1692018219]
 layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1757704237]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -196.0
+offset_right = 289.0
+offset_bottom = -59.0
+grow_horizontal = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer" unique_id=1274494975]
+layout_mode = 2
+ratio = 3.5
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/AspectRatioContainer" unique_id=237585986]
+layout_mode = 2
+texture = ExtResource("1_p7ula")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Separator" type="Control" parent="." unique_id=859669523]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Separator" unique_id=1125253192]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = 251.0
+offset_right = -239.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Separator/MarginContainer" unique_id=1552434026]
+layout_mode = 2
+split_offsets = PackedInt32Array(0, 0, 0)
+drag_area_margin_begin = 5
+drag_area_margin_end = 5
+drag_area_offset = 5
+
+[node name="New Game" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1209329723]
+layout_mode = 2
+text = "NEW GAME"
+
+[node name="Load" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1112781613]
+layout_mode = 2
+text = "Load"
+
+[node name="Settings" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=930405882]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1386775879]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
+text = "Exit"
