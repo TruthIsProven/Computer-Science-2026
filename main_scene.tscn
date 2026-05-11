@@ -3,16 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Desktop_page.tscn" id="1_0f027"]
 [ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Starting Screen.tscn" id="1_2c62f"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_gyfs4"]
+[sub_resource type="Gradient" id="Gradient_2c62f"]
+offsets = PackedFloat32Array(-2.524, 28.531)
+colors = PackedColorArray(0.8587912, 0.96247023, 0.9546502, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gyfs4"]
+resource_local_to_scene = true
+gradient = SubResource("Gradient_2c62f")
+use_hdr = true
 
 [node name="Node2D" type="Node2D" unique_id=2085207291]
 
 [node name="Starting_Screen" parent="." unique_id=1977320705 instance=ExtResource("1_2c62f")]
-anchors_preset = 8
-offset_left = 456.0
-offset_top = 261.0
-offset_right = 456.0
-offset_bottom = 261.0
+top_level = true
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 size_flags_horizontal = 0
 
 [node name="Desktop" parent="." unique_id=689715138 instance=ExtResource("1_0f027")]
@@ -23,8 +30,11 @@ offset_right = 444.0
 offset_bottom = 295.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036123436]
+layer = -1
 follow_viewport_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=294119819]
-scale = Vector2(960, 540)
-texture = SubResource("ImageTexture_gyfs4")
+z_index = -6
+position = Vector2(122254, 251)
+scale = Vector2(1910.6371, 1530.5)
+texture = SubResource("GradientTexture1D_gyfs4")

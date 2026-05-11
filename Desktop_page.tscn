@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://beap7sd2ksqkw"]
 
+[ext_resource type="Script" uid="uid://d0d8l7jbyaw5r" path="res://desktop_page.gd" id="1_hf6wo"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_vkltf"]
 [ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://14765026726_b8a02d3989.jpg" id="2_vkltf"]
 
@@ -41,6 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hf6wo")
 metadata/_edit_horizontal_guides_ = [-217.0]
 
 [node name="Main Menu" type="MarginContainer" parent="." unique_id=1922339150]

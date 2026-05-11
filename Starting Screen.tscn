@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://bne71w16ru442"]
 
+[ext_resource type="Script" uid="uid://c3opqlrvf1jb4" path="res://starting_screen.gd" id="1_jh178"]
 [ext_resource type="Texture2D" uid="uid://hwfth56gkemy" path="res://Development 2.png" id="1_p7ula"]
 [ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="2_jh178"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udb0d"]
-content_margin_left = 4.0
 texture = ExtResource("2_jh178")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 region_rect = Rect2(139, 12, 106, 122)
 
 [node name="Control" type="Control" unique_id=1692018219]
 layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -20,6 +25,7 @@ offset_right = 480.0
 offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jh178")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1757704237]
 layout_mode = 1
@@ -46,6 +52,7 @@ axis_stretch_vertical = 2
 
 [node name="Separator" type="Control" parent="." unique_id=859669523]
 layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -75,28 +82,32 @@ theme_override_constants/margin_bottom = 15
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Separator/MarginContainer" unique_id=1552434026]
 layout_mode = 2
-split_offsets = PackedInt32Array(23, 58, 93)
+split_offsets = PackedInt32Array(0, 0, 0)
 drag_area_margin_begin = 5
 drag_area_margin_end = 5
 drag_area_offset = 5
-split_offset = 23
 
 [node name="New Game" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1386775879]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.21236858, 0.3354641, 0.258769, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "New Game"
 
 [node name="Load" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1330685971]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.21176471, 0.3372549, 0.25882354, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Load"
 
 [node name="Settiings" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1598120318]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.21176471, 0.3372549, 0.25882354, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Settings"
 
 [node name="Exit" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=2133667275]
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.21176471, 0.3372549, 0.25882354, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Exit"
