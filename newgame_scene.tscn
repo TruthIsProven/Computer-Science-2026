@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dwlk334cg2cii"]
+
+[ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Desktop_page.tscn" id="1_40sng"]
+
+[node name="Node2D" type="Node2D" unique_id=757280073]
+
+[node name="Control" parent="." unique_id=689715138 instance=ExtResource("1_40sng")]

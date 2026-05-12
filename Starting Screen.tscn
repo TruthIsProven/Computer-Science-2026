@@ -82,10 +82,11 @@ theme_override_constants/margin_bottom = 15
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Separator/MarginContainer" unique_id=1552434026]
 layout_mode = 2
-split_offsets = PackedInt32Array(0, 0, 0)
+split_offsets = PackedInt32Array(31, 74, 117)
 drag_area_margin_begin = 5
 drag_area_margin_end = 5
 drag_area_offset = 5
+split_offset = 31
 
 [node name="New Game" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1386775879]
 layout_mode = 2
@@ -111,3 +112,6 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.21176471, 0.3372549, 0.25882354, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Exit"
+
+[connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Exit" to="." method="_on_exit_pressed"]

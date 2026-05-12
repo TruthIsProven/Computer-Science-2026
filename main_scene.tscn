@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cfdb6asv4k30n"]
 
-[ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Desktop_page.tscn" id="1_0f027"]
 [ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Starting Screen.tscn" id="1_2c62f"]
+[ext_resource type="Script" uid="uid://xyaafaxw4qcd" path="res://main_scene.gd" id="1_gyfs4"]
 
 [sub_resource type="Gradient" id="Gradient_2c62f"]
 offsets = PackedFloat32Array(-2.524, 28.531)
@@ -13,6 +13,7 @@ gradient = SubResource("Gradient_2c62f")
 use_hdr = true
 
 [node name="Node2D" type="Node2D" unique_id=2085207291]
+script = ExtResource("1_gyfs4")
 
 [node name="Starting_Screen" parent="." unique_id=1977320705 instance=ExtResource("1_2c62f")]
 top_level = true
@@ -22,12 +23,10 @@ offset_right = 0.0
 offset_bottom = 0.0
 size_flags_horizontal = 0
 
-[node name="Desktop" parent="." unique_id=689715138 instance=ExtResource("1_0f027")]
-visible = false
-offset_left = 444.0
-offset_top = 295.0
-offset_right = 444.0
-offset_bottom = 295.0
+[node name="Button" type="Button" parent="Starting_Screen" unique_id=1460604868]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036123436]
 layer = -1
@@ -38,3 +37,5 @@ z_index = -6
 position = Vector2(122254, 251)
 scale = Vector2(1910.6371, 1530.5)
 texture = SubResource("GradientTexture1D_gyfs4")
+
+[connection signal="pressed" from="Starting_Screen/Button" to="." method="_on_button_pressed"]
