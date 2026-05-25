@@ -114,4 +114,5 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Exit"
 
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Settiings" to="." method="_on_settiings_pressed"]
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Exit" to="." method="_on_exit_pressed"]

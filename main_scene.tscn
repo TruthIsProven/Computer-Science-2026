@@ -23,11 +23,6 @@ offset_right = 0.0
 offset_bottom = 0.0
 size_flags_horizontal = 0
 
-[node name="Button" type="Button" parent="Starting_Screen" unique_id=1460604868]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036123436]
 layer = -1
 follow_viewport_enabled = true
@@ -37,5 +32,3 @@ z_index = -6
 position = Vector2(122254, 251)
 scale = Vector2(1910.6371, 1530.5)
 texture = SubResource("GradientTexture1D_gyfs4")
-
-[connection signal="pressed" from="Starting_Screen/Button" to="." method="_on_button_pressed"]
