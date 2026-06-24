@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgk8en3f2p7q3"]
 
 [ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="1_04dy0"]
+[ext_resource type="Script" uid="uid://b7wmq5ekijl6m" path="res://MainGameScript.gd" id="1_unr5i"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_7s3vj"]
 [ext_resource type="Texture2D" uid="uid://ctghtvcb4le07" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Small Square Buttons.png" id="3_7s3vj"]
 
@@ -28,6 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_unr5i")
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1310781484]
 layout_mode = 1
@@ -105,22 +107,16 @@ patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="Control" type="Control" parent="." unique_id=684651250]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+[node name="MarginContainer3-1" type="MarginContainer" parent="MarginContainer2/MarginContainer3" unique_id=1874326106]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=2014303609]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/MarginContainer3/MarginContainer3-1" unique_id=1574163134]
+layout_mode = 2
+bbcode_enabled = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2132023812]
 process_mode = 3
@@ -151,7 +147,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Ghost"
 icon_alignment = 1
 expand_icon = true
 
@@ -162,18 +158,18 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "The BIG ET"
 icon_alignment = 1
 expand_icon = true
 
 [node name="Button 3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1947028742]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "THE Job Application"
 icon_alignment = 1
 expand_icon = true
 
@@ -184,7 +180,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "ybrik"
 icon_alignment = 1
 expand_icon = true
 
@@ -195,7 +191,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Cockroaches"
 icon_alignment = 1
 expand_icon = true
 
@@ -206,7 +202,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Stuff"
 icon_alignment = 1
 expand_icon = true
 
@@ -253,3 +249,14 @@ action_mode = 0
 text = "1"
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 10" to="." method="_on_button_10_pressed"]
