@@ -37,6 +37,7 @@ func _on_button_8_pressed() -> void:
 
 
 func _on_button_9_pressed() -> void:
+	#comment
 	rich_label.text = "Hello World!9" 
 
 
