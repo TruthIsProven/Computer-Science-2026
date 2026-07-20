@@ -6,6 +6,7 @@ extends Control
 func _on_button_1_pressed() -> void:
 	# 2. Change the text property directly
 	rich_label.text = "Hello World!" 
+	
 
 func _on_button_2_pressed() -> void:
 	

@@ -118,6 +118,9 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 bbcode_enabled = true
 
+[node name="Texture2D" type="Sprite2D" parent="MarginContainer2/MarginContainer3" unique_id=1515557233]
+position = Vector2(598, 201)
+
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2132023812]
 process_mode = 3
 layout_mode = 1
