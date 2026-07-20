@@ -1,7 +1,7 @@
 extends Control
 
 
-const WIKI_FILE_PATH := "res://data/wiki_articles.json"
+const WIKI_FILE_PATH := "res://entries/entries.json"
 
 @onready var rich_label: RichTextLabel = \
 	$"MarginContainer2/MarginContainer3/MarginContainer3-1/RichTextLabel"
@@ -102,7 +102,7 @@ func open_article(article_id: String) -> void:
 	page_text += "[font_size=20][b]Recommended Action[/b][/font_size]\n"
 	page_text += recommended_action
 
-	rich_label.text = page_text
+	rich_label.text = "[center]" + page_text + "[/center]"
 
 
 func _on_button_1_pressed() -> void:
