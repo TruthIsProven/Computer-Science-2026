@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0d8l7jbyaw5r" path="res://desktop_page.gd" id="1_hf6wo"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_vkltf"]
-[ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://14765026726_b8a02d3989.jpg" id="2_vkltf"]
+[ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://Images/14765026726_b8a02d3989.jpg" id="2_vkltf"]
 
 [sub_resource type="Gradient" id="Gradient_b5wo7"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwlk334cg2cii"]
+
+[ext_resource type="PackedScene" uid="uid://cgk8en3f2p7q3" path="res://Scenes/Game_page1.tscn" id="1_uvy87"]
+[ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Scenes/Desktop_page.tscn" id="2_86p2j"]
+
+[node name="Node2D" type="Node2D" unique_id=757280073]
+
+[node name="Control2" parent="." unique_id=1394682552 instance=ExtResource("1_uvy87")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 480.0
+offset_top = 270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Control" parent="." unique_id=689715138 instance=ExtResource("2_86p2j")]

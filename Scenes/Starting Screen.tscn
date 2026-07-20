@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bne71w16ru442"]
 
 [ext_resource type="Script" uid="uid://c3opqlrvf1jb4" path="res://starting_screen.gd" id="1_jh178"]
-[ext_resource type="Texture2D" uid="uid://hwfth56gkemy" path="res://Development 2.png" id="1_p7ula"]
+[ext_resource type="Texture2D" uid="uid://hwfth56gkemy" path="res://Images/Development 2.png" id="1_p7ula"]
 [ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="2_jh178"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udb0d"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cfdb6asv4k30n"]
 
-[ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Starting Screen.tscn" id="1_2c62f"]
-[ext_resource type="Script" uid="uid://xyaafaxw4qcd" path="res://main_scene.gd" id="1_gyfs4"]
+[ext_resource type="Script" uid="uid://xyaafaxw4qcd" path="res://main_scene.gd" id="1_6l7je"]
+[ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Scenes/Starting Screen.tscn" id="2_jv6wh"]
 
 [sub_resource type="Gradient" id="Gradient_2c62f"]
 offsets = PackedFloat32Array(-2.524, 28.531)
@@ -13,9 +13,9 @@ gradient = SubResource("Gradient_2c62f")
 use_hdr = true
 
 [node name="Node2D" type="Node2D" unique_id=2085207291]
-script = ExtResource("1_gyfs4")
+script = ExtResource("1_6l7je")
 
-[node name="Starting_Screen" parent="." unique_id=1977320705 instance=ExtResource("1_2c62f")]
+[node name="Starting_Screen" parent="." unique_id=1977320705 instance=ExtResource("2_jv6wh")]
 top_level = true
 offset_left = 0.0
 offset_top = 0.0
