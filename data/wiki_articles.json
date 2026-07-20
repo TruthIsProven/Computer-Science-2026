@@ -1,0 +1,40 @@
+{
+  "article_1": {
+	"title": "Black Mold",
+	"category": "Fungal Hazards",
+	"description": "Black mold commonly develops in areas with high levels of moisture.",
+	"signs": [
+	  "Dark patches on walls",
+	  "A strong damp smell",
+	  "Growth near bathrooms",
+      "Discoloration around windows"
+	],
+	"recommended_action": "Inspect the affected area and remove the source of moisture."
+  },
+
+  "article_2": {
+	"title": "False Outlet",
+	"category": "Structural Anomalies",
+	"description": "False outlets resemble ordinary electrical sockets but may indicate an unusual presence inside the wall.",
+	"signs": [
+	  "Scratching noises behind the wall",
+	  "An outlet appearing suddenly",
+	  "Incorrectly positioned screws",
+      "Unusual heat around the outlet"
+	],
+	"recommended_action": "Do not touch or remove the outlet. Contact a qualified inspector."
+  },
+
+  "article_3": {
+	"title": "Ceiling Dweller",
+	"category": "Household Entities",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"signs": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  }
+}
