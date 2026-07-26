@@ -140,6 +140,5 @@ func _on_button_8_pressed() -> void:
 func _on_button_9_pressed() -> void:
 	open_article("article_9")
 
-
 func _on_button_10_pressed() -> void:
 	open_article("article_10")
