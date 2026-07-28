@@ -1,9 +1,8 @@
 {
   "article_1": {
-	"title": "Black Mold",
-	"category": "Fungal Hazards",
+	"title": "The BIG ET",
 	"description": "Black mold commonly develops in areas with high levels of moisture.",
-	"signs": [
+	"danger": [
 	  "Dark patches on walls",
 	  "A strong damp smell",
 	  "Growth near bathrooms",
@@ -13,10 +12,9 @@
   },
 
   "article_2": {
-	"title": "False Outlet",
-	"category": "Structural Anomalies",
+	"title": "ybrik",
 	"description": "False outlets resemble ordinary electrical sockets but may indicate an unusual presence inside the wall.",
-	"signs": [
+	"danger": [
 	  "Scratching noises behind the wall",
 	  "An outlet appearing suddenly",
 	  "Incorrectly positioned screws",
@@ -25,16 +23,99 @@
 	"recommended_action": "Do not touch or remove the outlet. Contact a qualified inspector."
   },
 
-  "article_3": {
-	"title": "Ceiling Dweller",
-	"category": "Household Entities",
+"article_3": {
+	"title": "Cockroaches",
 	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
-	"signs": [
+	"danger": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
       "Small openings near ceiling corners"
 	],
 	"recommended_action": "Leave the room and restrict access to the affected area."
-  }
+  },
+
+"article_4": {
+	"title": "Wind Sprouts",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_5": {
+	"title": "Telephone Bug",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_6": {
+	"title": "Boris",
+	"description": "Boris is a pigeon like creature that flies around areas where a school is located",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_7": {
+	"title": "Ceiling Dweller",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_8": {
+	"title": "Ceiling Dweller",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_9": {
+	"title": "Ceiling Dweller",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
+
+"article_10": {
+	"title": "THE Job Application",
+	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"danger": [
+	  "Footsteps above the ceiling",
+	  "Missing attic insulation",
+	  "Scratching during the night",
+      "Small openings near ceiling corners"
+	],
+	"recommended_action": "Leave the room and restrict access to the affected area."
+  },
 }

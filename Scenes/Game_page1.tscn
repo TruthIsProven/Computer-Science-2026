@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_7s3vj"]
 [ext_resource type="Texture2D" uid="uid://ctghtvcb4le07" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Small Square Buttons.png" id="3_7s3vj"]
 
+[sub_resource type="SystemFont" id="SystemFont_3x480"]
+
+[sub_resource type="SystemFont" id="SystemFont_oib7m"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unr5i"]
 texture = ExtResource("3_7s3vj")
 texture_margin_left = 5.0
@@ -116,6 +120,11 @@ theme_override_constants/margin_bottom = 10
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2/MarginContainer3/MarginContainer3-1" unique_id=1574163134]
 layout_mode = 2
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = SubResource("SystemFont_3x480")
+theme_override_fonts/bold_font = SubResource("SystemFont_oib7m")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
 
 [node name="Texture2D" type="Sprite2D" parent="MarginContainer2/MarginContainer3" unique_id=1515557233]
@@ -150,7 +159,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "Ghost"
+text = "The BIG ET"
 icon_alignment = 1
 expand_icon = true
 
@@ -161,7 +170,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "The BIG ET"
+text = "ybrik"
 icon_alignment = 1
 expand_icon = true
 
@@ -172,7 +181,7 @@ theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "THE Job Application"
+text = "Cockroaches"
 icon_alignment = 1
 expand_icon = true
 
@@ -183,7 +192,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "ybrik"
+text = "Wind Sprouts"
 icon_alignment = 1
 expand_icon = true
 
@@ -194,7 +203,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "Cockroaches"
+text = "Telephone Bug"
 icon_alignment = 1
 expand_icon = true
 
@@ -245,11 +254,11 @@ expand_icon = true
 [node name="Button 10" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1201838114]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "THE Job Application"
 icon_alignment = 1
 expand_icon = true
 

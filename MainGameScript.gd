@@ -68,12 +68,11 @@ func open_article(article_id: String) -> void:
 	var article: Dictionary = wiki_articles[article_id]
 
 	var title: String = article.get("title", "Untitled Article")
-	var category: String = article.get("category", "Uncategorised")
 	var description: String = article.get(
 		"description",
 		"No description is available."
 	)
-	var signs: Array = article.get("signs", [])
+	var danger: Array = article.get("danger", [])
 	var recommended_action: String = article.get(
 		"recommended_action",
 		"No recommended action is available."
@@ -81,25 +80,23 @@ func open_article(article_id: String) -> void:
 
 	var page_text := ""
 
-	page_text += "[font_size=32][b]"
+	page_text += "[font_size=40][b]"
 	page_text += title
 	page_text += "[/b][/font_size]\n"
 
-	page_text += "[i]"
-	page_text += category
-	page_text += "[/i]\n\n"
-
-	page_text += "[font_size=20][b]Description[/b][/font_size]\n"
+	page_text += "\n[font_size=30][b]Description[/b][/font_size]\n"
 	page_text += description
 	page_text += "\n\n"
 
-	page_text += "[font_size=20][b]Common Signs[/b][/font_size]\n"
+	page_text += "[font_size=30][b]Danger[/b][/font_size]\n"
 
-	for sign_text in signs:
-		page_text += "• " + str(sign_text) + "\n"
+	for sign_text in danger:
+		page_text += "[font_size=20]"
+		page_text += str(sign_text) + "\n"
+		page_text += "[/font_size]"
 
 	page_text += "\n"
-	page_text += "[font_size=20][b]Recommended Action[/b][/font_size]\n"
+	page_text += "[font_size=30][b]Recommended Action[/b][/font_size]\n"
 	page_text += recommended_action
 
 	rich_label.text = "[center]" + page_text + "[/center]"
