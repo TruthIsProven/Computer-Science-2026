@@ -37,19 +37,18 @@
 
 "article_4": {
 	"title": "Wind Sprouts",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"description": "The wind sprouts are a light weighted seed that is easily carried by wind. A wind sprout hoarde can be seen from a 100 meter radius. If observed, please run immediately.",
 	"danger": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	  "The wind sprouts can attatch onto your skin and grow roots. This can cause:",
+	  "Wind sprout infection",
+	  "New seeds possibly growing inside your blood vessels. If let on, can cause your body to shut down."
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
+	"recommended_action": "Run immediately until wind sprout hoarde is no longer visible. If the wind sprouts are within 10 meter radius, use the HSH exterminate service."
   },
 
 "article_5": {
 	"title": "Telephone Bug",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"description": "The telephone bug is a form of m",
 	"danger": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
@@ -72,11 +71,11 @@
   },
 
 "article_7": {
-	"title": "Ceiling Dweller",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"title": "Laser Kiwi",
+	"description": 
+	"A normal appearing bird with two legs and wings although they cannot fly. However, the Laser Kiwis have green eyes. The Laser Kiwis can be met in the wild at night. There is a small chance it will wander into your home if your house has wooden flooring. The encounters might report damaged flooring, unknown green light or presence of wet bird footprints.",
+	
 	"danger": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
 	  "Scratching during the night",
       "Small openings near ceiling corners"
 	],
@@ -84,7 +83,7 @@
   },
 
 "article_8": {
-	"title": "Ceiling Dweller",
+	"title": "Toilet Dweller",
 	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
 	"danger": [
 	  "Footsteps above the ceiling",

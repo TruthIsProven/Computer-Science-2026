@@ -4,10 +4,13 @@
 [ext_resource type="Script" uid="uid://b7wmq5ekijl6m" path="res://MainGameScript.gd" id="1_unr5i"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_7s3vj"]
 [ext_resource type="Texture2D" uid="uid://ctghtvcb4le07" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Small Square Buttons.png" id="3_7s3vj"]
+[ext_resource type="Script" uid="uid://dckhjph3cxv5f" path="res://control_2.gd" id="5_3x480"]
 
 [sub_resource type="SystemFont" id="SystemFont_3x480"]
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_oib7m"]
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unr5i"]
 texture = ExtResource("3_7s3vj")
@@ -24,6 +27,14 @@ texture_margin_top = 5.0
 texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 region_rect = Rect2(16, 18, 16, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oib7m"]
+texture = ExtResource("2_7s3vj")
+region_rect = Rect2(837, 100, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m27ui"]
+texture = ExtResource("2_7s3vj")
+region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=1394682552]
 layout_mode = 3
@@ -262,6 +273,34 @@ text = "THE Job Application"
 icon_alignment = 1
 expand_icon = true
 
+[node name="Control2" type="Control" parent="." unique_id=2037835253]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.47200003
+anchor_right = 0.5
+anchor_bottom = 0.47200003
+offset_left = 447.0
+offset_top = -250.88002
+offset_right = 476.0
+offset_bottom = -221.88002
+script = ExtResource("5_3x480")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control2" unique_id=161588656]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.241379
+offset_right = 33.0
+offset_bottom = 34.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="exitbutton" type="Button" parent="Control2/MarginContainer" unique_id=1421426536]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_oib7m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m27ui")
+
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 3" to="." method="_on_button_3_pressed"]
@@ -272,3 +311,4 @@ expand_icon = true
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Button 10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="Control2/MarginContainer/exitbutton" to="." method="_on_exitbutton_pressed"]
