@@ -38,9 +38,14 @@ region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=1394682552]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -99,6 +104,7 @@ theme_override_constants/margin_bottom = 350
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer2/MarginContainer4" unique_id=768804552]
 layout_mode = 2
+mouse_filter = 1
 texture = ExtResource("2_7s3vj")
 region_rect = Rect2(107, 107, 26, 26)
 patch_margin_left = 5
@@ -108,6 +114,7 @@ patch_margin_bottom = 5
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer2" unique_id=2102391617]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 285
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
@@ -283,6 +290,7 @@ offset_left = 447.0
 offset_top = -250.88002
 offset_right = 476.0
 offset_bottom = -221.88002
+mouse_filter = 1
 script = ExtResource("5_3x480")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control2" unique_id=161588656]

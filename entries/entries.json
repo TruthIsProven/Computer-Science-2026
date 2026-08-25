@@ -1,32 +1,32 @@
 {
   "article_1": {
 	"title": "The BIG ET",
-	"description": "Black mold commonly develops in areas with high levels of moisture.",
-	"danger": [
-	  "Dark patches on walls",
-	  "A strong damp smell",
-	  "Growth near bathrooms",
-      "Discoloration around windows"
+	"description": "The big ET is a humanoid entity that wanders around human living areas at night. It typically takes a liking to quiet and dark environments",
+	"traits": [
+	  "The BIG ET is a shy entity that is easily stressed out by human gaze",
+	  "it emitts a small radioactive field around it, however this should not cause damage unless you were within it's 1 meter radius",
+	  "The BIG ET has an alien like appearance",
+      "It makes a loud screeching voice when inspected and launches itself towards the witness to murder them."
 	],
-	"recommended_action": "Inspect the affected area and remove the source of moisture."
+	"recommended_action": "If you have encountered the BIG ET, try to ignore it. If not and the BIG ET has noticed you looking at it. We recommend the HSH body searching service! If the BIG ET is wandering in your neighbourhood, do not worry, it will leave within 5-7 days as long as you don't look at it."
   },
 
   "article_2": {
 	"title": "ybrik",
-	"description": "False outlets resemble ordinary electrical sockets but may indicate an unusual presence inside the wall.",
-	"danger": [
-	  "Scratching noises behind the wall",
-	  "An outlet appearing suddenly",
-	  "Incorrectly positioned screws",
-      "Unusual heat around the outlet"
+	"description": "ybrik is a round, red sphere with cartoon eyes with two hands and two feet.",
+	"traits": [
+	  "Ybrik is always irritated, which is why it always is red",
+	  "Ybrik loves chilli",
+	  "Ybrik makes a 'yopo' sound when near by",
+      "Leaves round and red footprints"
 	],
-	"recommended_action": "Do not touch or remove the outlet. Contact a qualified inspector."
+	"recommended_action": "If the human has possibly encountered ybrik, 🚨ABORT MISSION🚨 Please use the HSH emergency exit service."
   },
 
 "article_3": {
 	"title": "Cockroaches",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
-	"danger": [
+	"description": "Cockroaches are",
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
@@ -38,7 +38,7 @@
 "article_4": {
 	"title": "Wind Sprouts",
 	"description": "The wind sprouts are a light weighted seed that is easily carried by wind. A wind sprout hoarde can be seen from a 100 meter radius. If observed, please run immediately.",
-	"danger": [
+	"traits": [
 	  "The wind sprouts can attatch onto your skin and grow roots. This can cause:",
 	  "Wind sprout infection",
 	  "New seeds possibly growing inside your blood vessels. If let on, can cause your body to shut down."
@@ -49,7 +49,7 @@
 "article_5": {
 	"title": "Telephone Bug",
 	"description": "The telephone bug is a form of m",
-	"danger": [
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
@@ -61,7 +61,7 @@
 "article_6": {
 	"title": "Boris",
 	"description": "Boris is a pigeon like creature that flies around areas where a school is located",
-	"danger": [
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
@@ -75,7 +75,7 @@
 	"description": 
 	"A normal appearing bird with two legs and wings although they cannot fly. However, the Laser Kiwis have green eyes. The Laser Kiwis can be met in the wild at night. There is a small chance it will wander into your home if your house has wooden flooring. The encounters might report damaged flooring, unknown green light or presence of wet bird footprints.",
 	
-	"danger": [
+	"traits": [
 	  "Scratching during the night",
       "Small openings near ceiling corners"
 	],
@@ -85,7 +85,7 @@
 "article_8": {
 	"title": "Toilet Dweller",
 	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
-	"danger": [
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
@@ -97,7 +97,7 @@
 "article_9": {
 	"title": "Ceiling Dweller",
 	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
-	"danger": [
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",
@@ -109,7 +109,7 @@
 "article_10": {
 	"title": "THE Job Application",
 	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
-	"danger": [
+	"traits": [
 	  "Footsteps above the ceiling",
 	  "Missing attic insulation",
 	  "Scratching during the night",

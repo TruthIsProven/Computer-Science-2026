@@ -1,7 +1,7 @@
 extends Control
 
 
-const WIKI_FILE_PATH := "res://entries/entries.json"
+const WIKI_FILE_PATH := "res://entries/entries.json" #unchangeable value
 
 @onready var rich_label: RichTextLabel = \
 	$"MarginContainer2/MarginContainer3/MarginContainer3-1/RichTextLabel"
@@ -19,8 +19,8 @@ func _ready() -> void: #Function that calls the designated article in the JSON f
 
 func load_wiki_articles() -> void:#function that loads the designated articles and show error message when the JSON file is not found
 	if not FileAccess.file_exists(WIKI_FILE_PATH):
-		push_error("Wiki file was not found: " + WIKI_FILE_PATH)
-		rich_label.text = "The wiki database could not be found."
+		push_error("Entries were not found: " + WIKI_FILE_PATH)
+		rich_label.text = "The entries database could not be found."
 		return
 
 	var file := FileAccess.open(WIKI_FILE_PATH, FileAccess.READ)
@@ -72,7 +72,7 @@ func open_article(article_id: String) -> void: #Get the different part of the ar
 		"description",
 		"No description is available."
 	)
-	var danger: Array = article.get("danger", [])
+	var traits: Array = article.get("traits", [])
 	var recommended_action: String = article.get(
 		"recommended_action",
 		"No recommended action is available."
@@ -90,9 +90,9 @@ func open_article(article_id: String) -> void: #Get the different part of the ar
 	page_text += "[/font_size]"
 	page_text += "\n\n"
 
-	page_text += "[font_size=30][b]Danger[/b][/font_size]\n"
+	page_text += "[font_size=30][b]Traits[/b][/font_size]\n"
 
-	for sign_text in danger:
+	for sign_text in traits:
 		page_text += "[font_size=18]"
 		page_text += str(sign_text) + "\n"
 		page_text += "[/font_size]"

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bmim52g10ihu6"]
+
+[ext_resource type="PackedScene" uid="uid://cgk8en3f2p7q3" path="res://Scenes/Game_page1.tscn" id="1_ypvcy"]
+[ext_resource type="Texture2D" uid="uid://bj34rejvkg8t6" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x26.png" id="2_n6t15"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eksui"]
+texture = ExtResource("2_n6t15")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(11, 58, 27, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f6dil"]
+texture = ExtResource("2_n6t15")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(59, 107, 26, 26)
+
+[node name="Node2D" type="Node2D" unique_id=154800572]
+
+[node name="Wiki_Base" parent="." unique_id=1394682552 instance=ExtResource("1_ypvcy")]
+anchor_top = 0.0
+offset_left = 1.0
+offset_top = 0.0
+offset_right = 961.0
+offset_bottom = 540.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=699787367]
+offset_left = 53.0
+offset_top = 47.0
+offset_right = 239.0
+offset_bottom = 172.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 40
+
+[node name="Button 11" type="Button" parent="MarginContainer" unique_id=760483702]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_eksui")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f6dil")
+action_mode = 0
+text = "Start the day"
+icon_alignment = 1
+expand_icon = true
