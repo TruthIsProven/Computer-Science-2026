@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bmim52g10ihu6"]
 
+[ext_resource type="Script" uid="uid://b8gqne2wslkg0" path="res://quiz_page_scene.gd" id="1_eksui"]
 [ext_resource type="PackedScene" uid="uid://cgk8en3f2p7q3" path="res://Scenes/Game_page1.tscn" id="1_ypvcy"]
 [ext_resource type="Texture2D" uid="uid://bj34rejvkg8t6" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x26.png" id="2_n6t15"]
+[ext_resource type="PackedScene" uid="uid://bruolucqpr3n7" path="res://Incoming_Call.tscn" id="4_f6dil"]
+[ext_resource type="Texture2D" uid="uid://bcteumij3l3tx" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x19.png" id="5_oc0h6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eksui"]
 texture = ExtResource("2_n6t15")
@@ -19,7 +22,24 @@ texture_margin_right = 5.0
 texture_margin_bottom = 5.0
 region_rect = Rect2(59, 107, 26, 26)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2stpo"]
+texture = ExtResource("5_oc0h6")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(11, 102, 26, 19)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8i6y"]
+texture = ExtResource("5_oc0h6")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(59, 71, 26, 18)
+
 [node name="Node2D" type="Node2D" unique_id=154800572]
+script = ExtResource("1_eksui")
 
 [node name="Wiki_Base" parent="." unique_id=1394682552 instance=ExtResource("1_ypvcy")]
 anchor_top = 0.0
@@ -38,7 +58,7 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 40
 
-[node name="Button 11" type="Button" parent="MarginContainer" unique_id=760483702]
+[node name="Start_button" type="Button" parent="MarginContainer" unique_id=760483702]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
@@ -48,3 +68,35 @@ action_mode = 0
 text = "Start the day"
 icon_alignment = 1
 expand_icon = true
+
+[node name="Incoming Call" parent="." unique_id=541950636 instance=ExtResource("4_f6dil")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 489.0
+offset_top = 264.0
+offset_right = 489.0
+offset_bottom = 264.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Incoming Call" unique_id=988579911]
+layout_mode = 0
+offset_left = -266.0
+offset_top = -146.0
+offset_right = 266.0
+offset_bottom = 142.0
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_top = 160
+theme_override_constants/margin_right = 110
+theme_override_constants/margin_bottom = 95
+
+[node name="Pickup_call" type="Button" parent="Incoming Call/MarginContainer2" unique_id=401946749]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_2stpo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n8i6y")
+text = "Pick up call"
+
+[connection signal="pressed" from="MarginContainer/Start_button" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="Incoming Call/MarginContainer2/Pickup_call" to="." method="_on_pickup_call_pressed"]

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://c3opqlrvf1jb4" path="res://starting_screen.gd" id="1_jh178"]
 [ext_resource type="Texture2D" uid="uid://hwfth56gkemy" path="res://Images/Development 2.png" id="1_p7ula"]
 [ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="2_jh178"]
+[ext_resource type="PackedScene" uid="uid://bb1klufhlhhou" path="res://Scenes/Settings.tscn" id="4_vr6j4"]
+[ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="5_iryod"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_udb0d"]
 texture = ExtResource("2_jh178")
@@ -11,6 +13,14 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 region_rect = Rect2(139, 12, 106, 122)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20jq5"]
+texture = ExtResource("5_iryod")
+region_rect = Rect2(837, 100, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmvq0"]
+texture = ExtResource("5_iryod")
+region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=1692018219]
 layout_mode = 3
@@ -113,6 +123,29 @@ theme_override_colors/font_color = Color(0.21176471, 0.3372549, 0.25882354, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "Exit"
 
+[node name="Settings" parent="." unique_id=656965542 instance=ExtResource("4_vr6j4")]
+visible = false
+layout_mode = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="Settings" unique_id=1854294304]
+top_level = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = 27.0
+offset_right = 935.0
+offset_bottom = 518.0
+theme_override_constants/margin_left = 870
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 450
+
+[node name="exitbutton" type="Button" parent="Settings/MarginContainer3" unique_id=1132644187]
+top_level = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_20jq5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lmvq0")
+
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Settiings" to="." method="_on_settiings_pressed"]
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings/MarginContainer3/exitbutton" to="." method="_on_exitbutton_pressed"]

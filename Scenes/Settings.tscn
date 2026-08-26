@@ -5,15 +5,6 @@
 [ext_resource type="FontFile" uid="uid://dbetthibdf3l1" path="res://Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_2fv1l"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="3_mx4kw"]
 [ext_resource type="Script" uid="uid://lradv6fvw4c1" path="res://h_slider.gd" id="4_37a8j"]
-[ext_resource type="Script" uid="uid://dckhjph3cxv5f" path="res://control_2.gd" id="5_sfvul"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37a8j"]
-texture = ExtResource("3_mx4kw")
-region_rect = Rect2(837, 100, 22, 24)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfvul"]
-texture = ExtResource("3_mx4kw")
-region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=656965542]
 layout_mode = 3
@@ -172,30 +163,17 @@ step = 10.0
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Control/MarginContainer2/MarginContainer/VBoxContainer/HSlider2" unique_id=204010072]
 position = Vector2(0, -55)
 
-[node name="Control2" type="Control" parent="." unique_id=1056982094]
-layout_mode = 1
-anchor_left = 0.45800003
-anchor_top = 0.46100003
-anchor_right = 0.45800003
-anchor_bottom = 0.46100003
-offset_left = 446.31998
-offset_top = -224.94002
-offset_right = 496.31998
-offset_bottom = -178.94002
-script = ExtResource("5_sfvul")
-
-[node name="MarginContainer" type="MarginContainer" parent="Control2" unique_id=1690337527]
+[node name="MarginContainer3" type="MarginContainer" parent="Control" unique_id=221678740]
 layout_mode = 0
-offset_right = 49.0
-offset_bottom = 49.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+offset_left = 440.0
+offset_top = 73.0
+offset_right = 866.0
+offset_bottom = 148.0
 
-[node name="exitbutton" type="Button" parent="Control2/MarginContainer" unique_id=1707997698]
+[node name="CheckButton" type="CheckButton" parent="Control/MarginContainer3" unique_id=172908692]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_37a8j")
-theme_override_styles/hover = SubResource("StyleBoxTexture_sfvul")
+theme_override_font_sizes/font_size = 20
+action_mode = 0
+text = "Toggle Fullscreen"
 
-[connection signal="pressed" from="Control2/MarginContainer/exitbutton" to="." method="_on_exitbutton_pressed"]
+[connection signal="toggled" from="Control/MarginContainer3/CheckButton" to="." method="_on_check_button_toggled"]

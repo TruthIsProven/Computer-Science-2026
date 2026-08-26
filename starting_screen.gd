@@ -14,5 +14,10 @@ func _on_exit_pressed() -> void:
 
 
 func _on_settiings_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/settings_scene.tscn")
+	$Settings.visible = true
+	pass # Replace with function body.
+
+
+func _on_exitbutton_pressed() -> void:
+	$Settings.visible = false
 	pass # Replace with function body.

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0d8l7jbyaw5r" path="res://desktop_page.gd" id="1_hf6wo"]
 [ext_resource type="Texture2D" uid="uid://dtee525rmgc2r" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_vkltf"]
 [ext_resource type="Texture2D" uid="uid://dm8ac8iow601y" path="res://Images/14765026726_b8a02d3989.jpg" id="2_vkltf"]
+[ext_resource type="PackedScene" uid="uid://bb1klufhlhhou" path="res://Scenes/Settings.tscn" id="4_0t0k8"]
 
 [sub_resource type="Gradient" id="Gradient_b5wo7"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -34,6 +35,14 @@ region_rect = Rect2(645, 68, 22, 24)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hf6wo"]
 texture = ExtResource("1_vkltf")
 region_rect = Rect2(677, 70, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t0k8"]
+texture = ExtResource("1_vkltf")
+region_rect = Rect2(837, 100, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ud6i"]
+texture = ExtResource("1_vkltf")
+region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=689715138]
 layout_mode = 3
@@ -118,4 +127,34 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_q75rw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hf6wo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hf6wo")
 
+[node name="Settings" parent="." unique_id=656965542 instance=ExtResource("4_0t0k8")]
+visible = false
+top_level = true
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="Settings" unique_id=600421093]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 936.0
+offset_bottom = 520.0
+theme_override_constants/margin_left = 870
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 450
+
+[node name="exitbutton" type="Button" parent="Settings/MarginContainer4" unique_id=1489211896]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_0t0k8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8ud6i")
+
 [connection signal="pressed" from="Main Menu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Main Menu/BaseMenu Screen/NinePatchRect/MarginContainer/buttoncontainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Settings/MarginContainer4/exitbutton" to="." method="_on_exitbutton_pressed"]
