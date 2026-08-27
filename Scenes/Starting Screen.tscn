@@ -35,6 +35,7 @@ offset_right = 480.0
 offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_jh178")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1757704237]
@@ -127,25 +128,20 @@ text = "Exit"
 visible = false
 layout_mode = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="Settings" unique_id=1854294304]
+[node name="exitbutton" type="Button" parent="Settings" unique_id=1132644187]
 top_level = true
-layout_mode = 0
-offset_left = 26.0
-offset_top = 27.0
-offset_right = 935.0
-offset_bottom = 518.0
-theme_override_constants/margin_left = 870
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 450
-
-[node name="exitbutton" type="Button" parent="Settings/MarginContainer3" unique_id=1132644187]
-top_level = true
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0370001
+offset_left = 890.0
+offset_top = 28.0
+offset_right = -28.0
+offset_bottom = -489.98004
 theme_override_styles/normal = SubResource("StyleBoxTexture_20jq5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lmvq0")
 
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Settiings" to="." method="_on_settiings_pressed"]
 [connection signal="pressed" from="Separator/MarginContainer/VSplitContainer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Settings/MarginContainer3/exitbutton" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="Settings/exitbutton" to="." method="_on_exitbutton_pressed"]

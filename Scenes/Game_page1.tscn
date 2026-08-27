@@ -38,6 +38,7 @@ region_rect = Rect2(869, 102, 22, 22)
 
 [node name="Control" type="Control" unique_id=1394682552]
 layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

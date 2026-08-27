@@ -3,15 +3,6 @@
 [ext_resource type="Script" uid="uid://xyaafaxw4qcd" path="res://main_scene.gd" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://bne71w16ru442" path="res://Scenes/Starting Screen.tscn" id="2_jv6wh"]
 
-[sub_resource type="Gradient" id="Gradient_2c62f"]
-offsets = PackedFloat32Array(-2.524, 28.531)
-colors = PackedColorArray(0.8587912, 0.96247023, 0.9546502, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_gyfs4"]
-resource_local_to_scene = true
-gradient = SubResource("Gradient_2c62f")
-use_hdr = true
-
 [node name="Node2D" type="Node2D" unique_id=2085207291]
 script = ExtResource("1_6l7je")
 
@@ -22,13 +13,3 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 size_flags_horizontal = 0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2036123436]
-layer = -1
-follow_viewport_enabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=294119819]
-z_index = -6
-position = Vector2(122254, 251)
-scale = Vector2(1910.6371, 1530.5)
-texture = SubResource("GradientTexture1D_gyfs4")
