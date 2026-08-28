@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://b8gqne2wslkg0" path="res://quiz_page_scene.gd" id="1_eksui"]
 [ext_resource type="PackedScene" uid="uid://cgk8en3f2p7q3" path="res://Scenes/Game_page1.tscn" id="1_ypvcy"]
 [ext_resource type="Texture2D" uid="uid://bj34rejvkg8t6" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x26.png" id="2_n6t15"]
-[ext_resource type="PackedScene" uid="uid://bruolucqpr3n7" path="res://Incoming_Call.tscn" id="4_f6dil"]
+[ext_resource type="PackedScene" uid="uid://bruolucqpr3n7" path="res://Scenes/Incoming_Call.tscn" id="4_f6dil"]
 [ext_resource type="Texture2D" uid="uid://bcteumij3l3tx" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/buttons/Square Buttons 26x19.png" id="5_oc0h6"]
+[ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="6_2stpo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eksui"]
 texture = ExtResource("2_n6t15")
@@ -42,6 +43,7 @@ region_rect = Rect2(59, 71, 26, 18)
 script = ExtResource("1_eksui")
 
 [node name="Wiki_Base" parent="." unique_id=1394682552 instance=ExtResource("1_ypvcy")]
+anchors_preset = -1
 anchor_top = 0.0
 offset_left = 1.0
 offset_top = 0.0
@@ -74,9 +76,9 @@ visible = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 489.0
+offset_left = 501.0
 offset_top = 264.0
-offset_right = 489.0
+offset_right = 501.0
 offset_bottom = 264.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -97,6 +99,44 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_2stpo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_n8i6y")
 text = "Pick up call"
+
+[node name="Caller info" type="Control" parent="." unique_id=1486286288]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 501.0
+offset_top = 264.0
+offset_right = 501.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Caller info" unique_id=2075949313]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.70544
+offset_top = -147.75
+offset_right = 267.70544
+offset_bottom = 147.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Caller info/MarginContainer" unique_id=739224933]
+layout_mode = 2
+texture = ExtResource("6_2stpo")
+region_rect = Rect2(139, 12, 106, 122)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
 
 [connection signal="pressed" from="MarginContainer/Start_button" to="." method="_on_button_11_pressed"]
 [connection signal="pressed" from="Incoming Call/MarginContainer2/Pickup_call" to="." method="_on_pickup_call_pressed"]
