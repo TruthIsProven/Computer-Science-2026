@@ -10,5 +10,5 @@ func _on_button_11_pressed() -> void:
 
 func _on_pickup_call_pressed() -> void:
 	$"Incoming Call".visible = false
-	
+	$"Caller info".visible = true
 	pass # Replace with function body.
