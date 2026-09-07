@@ -1,28 +1,28 @@
 {
   "day_1": [
-    {
-      "id": "call_1",
-      "caller_name": "Sarah Miller",
-      "caller_text": "Hello? I hope you've reached the right department. There is something strange happening in my kitchen. For the past three nights I have heard scratching inside the walls.",
-      "question": "What is the most likely household hazard?",
-      "correct_answer": "false_outlet"
-    },
-    {
-      "id": "call_2",
-      "caller_name": "Daniel Ross",
-      "caller_text": "There are dark patches growing around my bathroom window. The room has also started smelling damp, even after I clean it.",
-      "question": "What is the most likely household hazard?",
-      "correct_answer": "black_mold"
-    }
+	{
+	  "id": "call_1",
+	  "caller_name": "Sarah Miller",
+	  "caller_text": "Hello? I hope you've reached the right department. There is something strange happening in my kitchen. For the past three nights I have heard scratching inside the walls.",
+	  "question": "What is the most likely household hazard?",
+	  "correct_answer": "false_outlet"
+	},
+	{
+	  "id": "call_2",
+	  "caller_name": "Daniel Ross",
+	  "caller_text": "There are dark patches growing around my bathroom window. The room has also started smelling damp, even after I clean it.",
+	  "question": "What is the most likely household hazard?",
+	  "correct_answer": "black_mold"
+	}
   ],
 
   "day_2": [
-    {
-      "id": "call_1",
-      "caller_name": "Emily Carter",
-      "caller_text": "Something has been moving above my bedroom ceiling every night. I checked the attic, but I couldn't find anything.",
-      "question": "What is causing the disturbance?",
-      "correct_answer": "ceiling_dweller"
-    }
+	{
+	  "id": "call_1",
+	  "caller_name": "Emily Carter",
+	  "caller_text": "Something has been moving above my bedroom ceiling every night. I checked the attic, but I couldn't find anything.",
+	  "question": "What is causing the disturbance?",
+	  "correct_answer": "ceiling_dweller"
+	}
   ]
 }

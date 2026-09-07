@@ -212,7 +212,7 @@ anchor_bottom = 1.0
 offset_left = 332.0
 offset_top = 67.0
 offset_right = -80.0
-offset_bottom = -383.0
+offset_bottom = -340.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -230,7 +230,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 75
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_bottom = 65
 
 [node name="OptionButton" type="OptionButton" parent="Answering Panel/MarginContainer/MarginContainer" unique_id=158189091]
 layout_mode = 2
@@ -272,8 +272,20 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_6otxg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wjww6")
 
+[node name="MarginContainer3" type="MarginContainer" parent="Answering Panel" unique_id=1068703285]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 151.0
+offset_right = 767.0
+offset_bottom = 188.0
+
+[node name="Confirmbutton" type="Button" parent="Answering Panel/MarginContainer3" unique_id=278995451]
+layout_mode = 2
+text = "Submit"
+
 [connection signal="pressed" from="MarginContainer/Start_button" to="." method="_on_button_11_pressed"]
 [connection signal="pressed" from="Incoming Call/MarginContainer2/Pickup_call" to="." method="_on_pickup_call_pressed"]
 [connection signal="pressed" from="Caller info/MarginContainer/MarginContainer2/Hold" to="." method="_on_hold_pressed"]
 [connection signal="pressed" from="question_at_top_left/Answer Button" to="." method="_on_answer_button_pressed"]
 [connection signal="pressed" from="Answering Panel/MarginContainer2/exitbutton" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="Answering Panel/MarginContainer3/Confirmbutton" to="." method="_on_confirmbutton_pressed"]

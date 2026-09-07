@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var option_button: OptionButton = $"Answering Panel/MarginContainer/MarginContainer/OptionButton"
+
 class Call:
 	var caller_name: String
 	var caller_text: String
@@ -20,6 +22,9 @@ var current_day = 1
 var current_call = 0
 
 var active_call: Call
+
+var correct_answers = 0
+var wrong_answers = 0
 
 func _ready() -> void:
 	
@@ -135,3 +140,90 @@ func _on_exitbutton_pressed() -> void:
 func _on_answer_button_pressed() -> void:
 	$"Answering Panel".visible = true
 	pass # Replace with function body.
+
+func check_player_answer() -> void:
+
+	# Get the option the player selected.
+	var selected_answer = option_button.get_item_text(
+		option_button.selected
+	)
+
+	# Compare it with the correct answer.
+	if selected_answer == active_call.answer:
+
+		print("CORRECT!")
+
+		correct_answers += 1
+
+	else:
+
+		print("WRONG!")
+
+		wrong_answers += 1
+
+
+	# Close the answering panel.
+	$"Answering Panel".visible = false
+
+	# Move to the next call.
+	go_to_next_call()
+	
+
+func _on_confirmbutton_pressed() -> void:
+	check_player_answer()
+	pass # Replace with function body.
+	
+func go_to_next_call() -> void:
+
+	# Move to the next call.
+	current_call += 1
+
+
+	var day_name = "day_" + str(current_day)
+
+	var day_calls = calls[day_name]
+
+
+	# Check if there are more calls today.
+	if current_call < day_calls.size():
+
+		print("Loading next call!")
+
+		# Hide the question.
+		$question_at_top_left.visible = false
+
+		# Show the incoming call.
+		$"Incoming Call".visible = true
+
+		# Load the next call.
+		load_current_call()
+
+	else:
+
+		print("Day complete!")
+
+		complete_day()
+
+func complete_day() -> void:
+
+	print("DAY ", current_day, " COMPLETE")
+
+	print("Correct answers: ", correct_answers)
+
+	print("Wrong answers: ", wrong_answers)
+
+
+	# Move to the next day.
+	current_day += 1
+
+
+	# Go back to the first call.
+	current_call = 0
+
+
+	# Hide the question.
+	$question_at_top_left.visible = false
+
+
+	# Show Start Day again.
+	$MarginContainer/Start_button.visible = true
