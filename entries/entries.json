@@ -20,7 +20,7 @@
 	  "Ybrik makes a 'yopo' sound when near by",
       "Leaves round and red footprints"
 	],
-	"recommended_action": "If the human has possibly encountered ybrik, 🚨ABORT MISSION🚨 Please use the HSH emergency exit service."
+	"recommended_action": "If the human has possibly encountered ybrik, ABORT MISSION Please use the HSH emergency exit service."
   },
 
 "article_3": {
@@ -116,5 +116,5 @@
       "Small openings near ceiling corners"
 	],
 	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+  }
 }
