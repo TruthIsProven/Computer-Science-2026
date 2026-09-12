@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var option_button: OptionButton = $"Answering Panel/MarginContainer/MarginContainer/OptionButton"
+@onready var result_text: RichTextLabel =$"Answer Result/MarginContainer/NinePatchRect/MarginContainer/Result"
 
 class Call:
 	var caller_name: String
@@ -26,7 +27,10 @@ var active_call: Call
 var correct_answers = 0
 var wrong_answers = 0
 
+var player_results = []
+
 func _ready() -> void:
+	print("GAME SCRIPT IS RUNNING")
 	
 	# Make sure the correct panels are visible.
 	$"Incoming Call".visible = false
@@ -148,12 +152,16 @@ func check_player_answer() -> void:
 		option_button.selected
 	)
 
+	var was_correct = selected_answer == active_call.answer
+
 	# Compare it with the correct answer.
 	if selected_answer == active_call.answer:
 
 		print("CORRECT!")
 
 		correct_answers += 1
+		result_text.text = "CORRECT!\n\nGood job!"
+
 
 	else:
 
@@ -161,12 +169,21 @@ func check_player_answer() -> void:
 
 		wrong_answers += 1
 
+		result_text.text = "INCORRECT!\n\nThe correct answer was: " + active_call.answer + ""
+
+		player_results.append({
+		"day": current_day,
+		"call": current_call,
+		"chosen_answer": selected_answer,
+		"correct_answer": active_call.answer,
+		"correct": was_correct
+	})
 
 	# Close the answering panel.
 	$"Answering Panel".visible = false
-
-	# Move to the next call.
-	go_to_next_call()
+	
+	# Show the result.
+	$"Answer Result".visible = true
 	
 
 func _on_confirmbutton_pressed() -> void:
@@ -209,21 +226,47 @@ func complete_day() -> void:
 	print("DAY ", current_day, " COMPLETE")
 
 	print("Correct answers: ", correct_answers)
-
 	print("Wrong answers: ", wrong_answers)
 
 
-	# Move to the next day.
-	current_day += 1
+	# Work out what the next day would be.
+	var next_day = current_day + 1
+
+	var next_day_name = "day_" + str(next_day)
 
 
-	# Go back to the first call.
-	current_call = 0
+	# Check if the next day actually exists in calls.json.
+	if calls.has(next_day_name):
+
+		# Move to the next day.
+		current_day = next_day
+
+		# Go back to the first call.
+		current_call = 0
+
+		# Hide the question.
+		$question_at_top_left.visible = false
+
+		# Show Start Day.
+		$MarginContainer/Start_button.visible = true
+
+		print("Ready for Day ", current_day)
+
+	else:
+
+		# There are no more days.
+		print("GAME COMPLETE!")
+
+		$question_at_top_left.visible = false
+
+		# Keep Start Day hidden because there are no more calls.
+		$MarginContainer/Start_button.visible = false
 
 
-	# Hide the question.
-	$question_at_top_left.visible = false
+func _on_continue_pressed() -> void:
+	
+	$"Answer Result".visible = false
 
-
-	# Show Start Day again.
-	$MarginContainer/Start_button.visible = true
+	go_to_next_call()
+	
+	pass # Replace with function body.

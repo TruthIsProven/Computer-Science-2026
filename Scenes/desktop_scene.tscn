@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://borluoba4n72q"]
+
+[ext_resource type="PackedScene" uid="uid://beap7sd2ksqkw" path="res://Scenes/Desktop_page.tscn" id="1_dbpbn"]
+
+[node name="DesktopScene" type="Node2D" unique_id=144709560]
+
+[node name="Control" parent="." unique_id=689715138 instance=ExtResource("1_dbpbn")]
+offset_left = 112.0
+offset_top = 236.0
+offset_right = 112.0
+offset_bottom = 236.0

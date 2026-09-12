@@ -283,9 +283,61 @@ offset_bottom = 188.0
 layout_mode = 2
 text = "Submit"
 
+[node name="Answer Result" type="Control" parent="." unique_id=1563131568]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 961.0
+offset_bottom = 540.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Answer Result" unique_id=1892463782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 332.0
+offset_top = 67.0
+offset_right = -80.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Answer Result/MarginContainer" unique_id=1218480618]
+layout_mode = 2
+texture = ExtResource("6_2stpo")
+region_rect = Rect2(139, 12, 106, 122)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Answer Result/MarginContainer/NinePatchRect" unique_id=1088951353]
+layout_mode = 0
+offset_right = 549.0
+offset_bottom = 203.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 63
+
+[node name="Result" type="RichTextLabel" parent="Answer Result/MarginContainer/NinePatchRect/MarginContainer" unique_id=1407388498]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Answer Result/MarginContainer" unique_id=1236919742]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 147
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="continue" type="Button" parent="Answer Result/MarginContainer/MarginContainer" unique_id=1675849153]
+layout_mode = 2
+text = "Continue"
+
 [connection signal="pressed" from="MarginContainer/Start_button" to="." method="_on_button_11_pressed"]
 [connection signal="pressed" from="Incoming Call/MarginContainer2/Pickup_call" to="." method="_on_pickup_call_pressed"]
 [connection signal="pressed" from="Caller info/MarginContainer/MarginContainer2/Hold" to="." method="_on_hold_pressed"]
 [connection signal="pressed" from="question_at_top_left/Answer Button" to="." method="_on_answer_button_pressed"]
 [connection signal="pressed" from="Answering Panel/MarginContainer2/exitbutton" to="." method="_on_exitbutton_pressed"]
 [connection signal="pressed" from="Answering Panel/MarginContainer3/Confirmbutton" to="." method="_on_confirmbutton_pressed"]
+[connection signal="pressed" from="Answer Result/MarginContainer/MarginContainer/continue" to="." method="_on_continue_pressed"]
