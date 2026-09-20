@@ -1,74 +1,74 @@
 {
-  "article_1": {
+"article_1": {
 	"title": "The BIG ET",
 	"description": "The big ET is a humanoid entity that wanders around human living areas at night. It typically takes a liking to quiet and dark environments",
 	"traits": [
-	  "The BIG ET is a shy entity that is easily stressed out by human gaze",
-	  "it emitts a small radioactive field around it, however this should not cause damage unless you were within it's 1 meter radius",
-	  "The BIG ET has an alien like appearance",
-      "It makes a loud screeching voice when inspected and launches itself towards the witness to murder them."
+	"The BIG ET is a shy entity that is easily stressed out by human gaze",
+	"it emitts a small radioactive field around it, however this should not cause damage unless you were within it's 1 meter radius",
+	"The BIG ET has an alien like appearance",
+	"It makes a loud screeching voice when inspected and launches itself towards the witness to murder them."
 	],
 	"recommended_action": "If you have encountered the BIG ET, try to ignore it. If not and the BIG ET has noticed you looking at it. We recommend the HSH body searching service! If the BIG ET is wandering in your neighbourhood, do not worry, it will leave within 5-7 days as long as you don't look at it."
-  },
+},
 
-  "article_2": {
+"article_2": {
 	"title": "ybrik",
 	"description": "ybrik is a round, red sphere with cartoon eyes with two hands and two feet.",
 	"traits": [
-	  "Ybrik is always irritated, which is why it always is red",
-	  "Ybrik loves chilli",
-	  "Ybrik makes a 'yopo' sound when near by",
-      "Leaves round and red footprints"
+	"Ybrik is always irritated, which is why it always is red",
+	"Ybrik loves chilli",
+	"Ybrik makes a 'yopo' sound when near by",
+	"Makes loud thumping footsteps when passing by"
 	],
 	"recommended_action": "If the human has possibly encountered ybrik, ABORT MISSION Please use the HSH emergency exit service."
-  },
+},
 
 "article_3": {
 	"title": "Cockroaches",
-	"description": "Cockroaches are",
+	"description": "Cockroaches are small, oval-shaped insects that commonly live in warm, dark, and damp areas. They are usually active at night and may hide behind appliances, inside cupboards, under sinks, or within cracks and wall spaces.",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"When you find one, there's always already a group of it",
+	"Small, brown droppings",
+	"Musty smell",
+	"Quiet rustling at night"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Please use the HSH insect removal service :D"
+},
 
 "article_4": {
 	"title": "Wind Sprouts",
 	"description": "The wind sprouts are a light weighted seed that is easily carried by wind. A wind sprout hoarde can be seen from a 100 meter radius. If observed, please run immediately.",
 	"traits": [
-	  "The wind sprouts can attatch onto your skin and grow roots. This can cause:",
-	  "Wind sprout infection",
-	  "New seeds possibly growing inside your blood vessels. If let on, can cause your body to shut down."
+	"The wind sprouts can attatch onto your skin and grow roots. This can cause:",
+	"Wind sprout infection",
+	"New seeds possibly growing inside your blood vessels. If let on, can cause your body to shut down."
 	],
 	"recommended_action": "Run immediately until wind sprout hoarde is no longer visible. If the wind sprouts are within 10 meter radius, use the HSH exterminate service."
-  },
+},
 
 "article_5": {
 	"title": "Telephone Bug",
-	"description": "The telephone bug is a form of m",
+	"description": "The telephone bug is a form of parasite that inserts itself into hand held telephones. It typically manifests as small feet dangling off the speaker of traditional hand held telephones",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"Little foot and antennas dangling out of the speaker of the telephone",
+	"Little chipping sound can be heard",
+	"It leaves a sticky trail of footsteps on the handle of the telephone",
+	"Likes cold environments"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Do NOT use the telephone, the telephone bug will take that oppertunity to enter your ear and live there. However, if that has already happened, please call the HSH medical department for an ear removal service."
+},
 
 "article_6": {
 	"title": "Boris",
-	"description": "Boris is a pigeon like creature that flies around areas where a school is located",
+	"description": "Boris is a pigeon like creature that flies around schools",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"Grey body with darker wings, with a ring of white feather at the bottom of the neck",
+	"Small head with a short beak.",
+	"An intense stare",
+	"It may leave grey feathers and may hear bird chipping sound when near it"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Do not feed Boris or let him near you. If he comes close, don't fight back and use the HSH cremation service."
+},
 
 "article_7": {
 	"title": "Laser Kiwi",
@@ -76,45 +76,45 @@
 	"A normal appearing bird with two legs and wings although they cannot fly. However, the Laser Kiwis have green eyes. The Laser Kiwis can be met in the wild at night. There is a small chance it will wander into your home if your house has wooden flooring. The encounters might report damaged flooring, unknown green light or presence of wet bird footprints.",
 	
 	"traits": [
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"Glowing Green eyes",
+	"Leavs footprints like birds, with three short claws",
+	"Usually appears in the woods at night",
+	"The area where the laser Kiwi is located will be dead silent aside from laser kiwi activity"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Move away from the observed laser kiwi immediately as quietly as possible."
+},
 
 "article_8": {
-	"title": "Toilet Dweller",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"title": "Mad Cow",
+	"description": "The mad cow appears like any ordinary cows you can find. With 4 legs and 4 hooves, 2 horns and a tail. The pattern on fur varies depending on cow species",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"The caller may encounter one or multiple cows staring at them.",
+	"Loss of direction",
+	"Loud wind in the area where the Mad Cows are located",
+	"The mam cows have a full set of 72 teeths in total"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Stare back at the cow and continue to move, if the cow starts to eat grass, you are now safe. If now, please use the HSH cremation service."
+},
 
 "article_9": {
-	"title": "Ceiling Dweller",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"title": "Seals",
+	"description": "Seals are fat blubberous creatures that lives on the shore, near the ocean. They typically appear grey with round eyes, two flippers and a tail being a powerful rear flipper",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"Seals make an ououououou sound when near by",
+	"Loud wind at their natural habitat, however they do go out into the wild",
+	"They flop when they are on land as their bodies are built to swim",
+	"Friendly"
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  },
+	"recommended_action": "Don't leave. Seals are friendly creatures :D"
+},
 
 "article_10": {
 	"title": "THE Job Application",
-	"description": "Ceiling dwellers usually inhabit attics and enclosed spaces above occupied rooms.",
+	"description": "THE job application is a moving piece of paper that wonders around after being created. ",
 	"traits": [
-	  "Footsteps above the ceiling",
-	  "Missing attic insulation",
-	  "Scratching during the night",
-      "Small openings near ceiling corners"
+	"Callers that report THE job application may report flapping paper sound.",
+	"The caller may recently quit their job and/or being jobless.",
 	],
-	"recommended_action": "Leave the room and restrict access to the affected area."
-  }
+	"recommended_action": "If you have a job, do not quit it. If you are quitting your job, ensure there are no job applications near your current area. "
+}
 }

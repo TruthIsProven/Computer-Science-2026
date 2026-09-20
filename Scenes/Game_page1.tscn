@@ -157,10 +157,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -438.0
-offset_top = -60.0
-offset_right = -231.0
-offset_bottom = 218.0
+offset_left = -447.0
+offset_top = -64.0
+offset_right = -223.0
+offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0
@@ -174,7 +174,7 @@ size_flags_vertical = 4
 [node name="Button 1" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=361739286]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
@@ -185,7 +185,7 @@ expand_icon = true
 [node name="Button 2" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1899550253]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
@@ -196,7 +196,7 @@ expand_icon = true
 [node name="Button 3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1947028742]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
@@ -207,7 +207,7 @@ expand_icon = true
 [node name="Button 4" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1143877592]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
@@ -218,7 +218,7 @@ expand_icon = true
 [node name="Button 5" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=123193007]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
@@ -229,51 +229,51 @@ expand_icon = true
 [node name="Button 6" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=357288895]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "Stuff"
+text = "Boris"
 icon_alignment = 1
 expand_icon = true
 
 [node name="Button 7" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1849423891]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Laser Kiwi"
 icon_alignment = 1
 expand_icon = true
 
 [node name="Button 8" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1873716170]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Mad Cow"
 icon_alignment = 1
 expand_icon = true
 
 [node name="Button 9" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=361250242]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0
-text = "1"
+text = "Seals"
 icon_alignment = 1
 expand_icon = true
 
 [node name="Button 10" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1201838114]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxTexture_unr5i")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qiugh")
 action_mode = 0

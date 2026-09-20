@@ -93,7 +93,7 @@ theme_override_constants/margin_bottom = 15
 
 [node name="VSplitContainer" type="VSplitContainer" parent="Separator/MarginContainer" unique_id=1552434026]
 layout_mode = 2
-split_offsets = PackedInt32Array(31, 74, 117)
+split_offsets = PackedInt32Array(31, 74)
 drag_area_margin_begin = 5
 drag_area_margin_end = 5
 drag_area_offset = 5
@@ -104,12 +104,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
 text = "New Game"
-
-[node name="Load" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1330685971]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxTexture_udb0d")
-text = "Load"
 
 [node name="Settiings" type="Button" parent="Separator/MarginContainer/VSplitContainer" unique_id=1598120318]
 layout_mode = 2

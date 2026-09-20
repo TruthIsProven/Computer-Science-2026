@@ -18,52 +18,21 @@ func _ready() -> void: #Function that calls the designated article in the JSON f
 
 
 func load_wiki_articles() -> void:#function that loads the designated articles and show error message when the JSON file is not found
-	if not FileAccess.file_exists(WIKI_FILE_PATH):
-		push_error("Entries were not found: " + WIKI_FILE_PATH)
-		rich_label.text = "The entries database could not be found."
-		return
 
 	var file := FileAccess.open(WIKI_FILE_PATH, FileAccess.READ)
-
-	if file == null:
-		push_error("Godot could not open the wiki file.")
-		rich_label.text = "The wiki database could not be opened." 
-		return
 
 	var json_text := file.get_as_text()
 	file.close()
 
 	var json := JSON.new()
-	var parse_result := json.parse(json_text)
-
-	if parse_result != OK:
-		push_error(
-			"JSON error on line %d: %s"
-			% [json.get_error_line(), json.get_error_message()]
-		)
-
-		rich_label.text = (
-			"The wiki database contains an error on line " +
-			str(json.get_error_line()) +
-			"."
-		)
-		return
-
-	if not json.data is Dictionary:
-		push_error("The wiki JSON must contain a Dictionary.")
-		rich_label.text = "The wiki database has an invalid structure."
-		return
-
+	var _parse_result := json.parse(json_text)
+	
 	wiki_articles = json.data
 
 	print("Loaded ", wiki_articles.size(), " wiki articles.")
 
 
 func open_article(article_id: String) -> void: #Get the different part of the article and show error message when not found
-	if not wiki_articles.has(article_id): #Error message function for if there are no article found under the name/number of article
-		push_warning("Unknown wiki article: " + article_id) 
-		rich_label.text = "ARTICLE NOT FOUND"
-		return
 
 	var article: Dictionary = wiki_articles[article_id]
 
