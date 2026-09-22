@@ -120,6 +120,14 @@ text = "Credit"
 fit_content = true
 scroll_active = false
 
+[node name="Exit Game" type="RichTextLabel" parent="Control/MarginContainer/VBoxContainer" unique_id=1103771490]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 45
+text = "Exit Game"
+fit_content = true
+scroll_active = false
+
 [node name="MarginContainer2" type="MarginContainer" parent="Control" unique_id=592248808]
 layout_mode = 1
 anchors_preset = -1
@@ -183,6 +191,17 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
 text = "User Interface Assets: Cup Nooble"
 
+[node name="MarginContainer3" type="MarginContainer" parent="Control/MarginContainer2" unique_id=1608553545]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 272
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 94
+
+[node name="Exit game" type="Button" parent="Control/MarginContainer2/MarginContainer3" unique_id=397957326]
+layout_mode = 2
+text = "Exit Game"
+
 [node name="MarginContainer3" type="MarginContainer" parent="Control" unique_id=221678740]
 layout_mode = 0
 offset_left = 440.0
@@ -197,4 +216,5 @@ theme_override_font_sizes/font_size = 20
 action_mode = 0
 text = "Toggle Fullscreen"
 
+[connection signal="pressed" from="Control/MarginContainer2/MarginContainer3/Exit game" to="." method="_on_exit_game_pressed"]
 [connection signal="toggled" from="Control/MarginContainer3/CheckButton" to="." method="_on_check_button_toggled"]

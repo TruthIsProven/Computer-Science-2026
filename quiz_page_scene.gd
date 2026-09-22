@@ -41,7 +41,7 @@ func _ready() -> void:
 	
 	# Load the calls from the JSON file.
 	load_calls()
-
+	show_day_introduction()
 
 func load_calls() -> void:
 	
@@ -69,12 +69,30 @@ func _on_button_11_pressed() -> void:
 	
 	# Hide Start Day button.
 	$MarginContainer/Start_button.visible = false
+	# show the day of shift
+	$Day_of_shift.visible = true
+	$Currentday.visible = true
+	_load_day_of_shift()
+
+func _load_day_of_shift() -> void:
 	
-	# Show Incoming Call panel.
+	var day_of_shift = [
+		"first shift",
+		"second shift",
+		"third shift",
+		"fourth shift"
+	]
+	
+	$Day_of_shift/MarginContainer3/MarginContainer/RichTextLabel.text = "[b]DAY " + str(current_day) +  "\nThis is your " + day_of_shift[current_day -1] + "[/b]" + "\nWelcome to the Human Safety Hotline.\nYou have several calls waiting.\nListen carefully and use the Wiki to identify the hazards."
+	
+	pass
+
+func _on_continue_from_day_pressed() -> void:
+	$Day_of_shift.visible = false
 	$"Incoming Call".visible = true
 	
-	# Load the first call of the current day.
 	load_current_call()
+	pass # Replace with function body.
 
 func load_current_call() -> void:
 	
@@ -146,12 +164,12 @@ func _on_answer_button_pressed() -> void:
 	pass # Replace with function body.
 
 func check_player_answer() -> void:
-
+	
 	# Get the option the player selected.
 	var selected_answer = option_button.get_item_text(
 		option_button.selected
 	)
-
+	
 	var was_correct = selected_answer == active_call.answer
 
 	# Compare it with the correct answer.
@@ -199,7 +217,7 @@ func go_to_next_call() -> void:
 	var day_name = "day_" + str(current_day)
 
 	var day_calls = calls[day_name]
-
+	
 
 	# Check if there are more calls today.
 	if current_call < day_calls.size():
@@ -234,13 +252,11 @@ func complete_day() -> void:
 
 	var next_day_name = "day_" + str(next_day)
 
-
 	# Check if the next day actually exists in calls.json.
 	if calls.has(next_day_name):
 
 		# Move to the next day.
 		current_day = next_day
-
 		# Go back to the first call.
 		current_call = 0
 
@@ -251,18 +267,17 @@ func complete_day() -> void:
 		$MarginContainer/Start_button.visible = true
 
 		print("Ready for Day ", current_day)
+		show_day_introduction()
 
 	else:
 
 		# There are no more days.
 		print("GAME COMPLETE!")
-
 		$question_at_top_left.visible = false
-
-		# Keep Start Day hidden because there are no more calls.
 		$MarginContainer/Start_button.visible = false
-
-
+		
+		$game_ended.visible = true
+ 
 func _on_continue_pressed() -> void:
 	
 	$"Answer Result".visible = false
@@ -270,3 +285,7 @@ func _on_continue_pressed() -> void:
 	go_to_next_call()
 	
 	pass # Replace with function body.
+	
+func show_day_introduction():
+	$Currentday.text = "DAY " + str(current_day)
+	
