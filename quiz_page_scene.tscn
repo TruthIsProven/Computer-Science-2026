@@ -407,29 +407,6 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 text = "Continue"
 
-[node name="game_ended" type="Control" parent="." unique_id=2031230498]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 961.0
-offset_bottom = 540.0
-mouse_filter = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="game_ended" unique_id=1509947002]
-layout_mode = 0
-offset_right = 961.0
-offset_bottom = 540.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="game_ended" unique_id=1317660899]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 38.0
-offset_right = 257.0
-offset_bottom = 182.0
-text = "THE GAME HAS ENDED"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="pressed" from="MarginContainer/Start_button" to="." method="_on_button_11_pressed"]
 [connection signal="pressed" from="Incoming Call/MarginContainer2/Pickup_call" to="." method="_on_pickup_call_pressed"]
 [connection signal="pressed" from="Caller info/MarginContainer/MarginContainer2/Hold" to="." method="_on_hold_pressed"]

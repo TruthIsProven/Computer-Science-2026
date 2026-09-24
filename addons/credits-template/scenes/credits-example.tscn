@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c2jaag5vu5uu1"]
+
+[ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://addons/credits-template/prefabs/credits.tscn" id="2_utq03"]
+
+[sub_resource type="Gradient" id="Gradient_utq03"]
+colors = PackedColorArray(0.15294118, 0.18039216, 0.21176471, 1, 0.15294118, 0.18039216, 0.21176471, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lpqq8"]
+gradient = SubResource("Gradient_utq03")
+
+[node name="CreditsExample" type="Node" unique_id=1709415300]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=14981583]
+position = Vector2(480.00003, 271.35672)
+scale = Vector2(15.000001, 8.479898)
+texture = SubResource("GradientTexture2D_lpqq8")
+
+[node name="Control" type="Control" parent="." unique_id=1006813958]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsRoll" parent="Control" unique_id=1358165324 instance=ExtResource("2_utq03")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.014
+offset_left = 493.44
+offset_top = -17801.938
+offset_bottom = -16891.926
+grow_horizontal = 2
+grow_vertical = 2
+
+[editable path="Control/CreditsRoll"]

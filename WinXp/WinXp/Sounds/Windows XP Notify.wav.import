@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df2f7uty6r4gh"
+path="res://.godot/imported/Windows XP Notify.wav-64a2a4df9d3d54e874031942dde99b23.sample"
+
+[deps]
+
+source_file="res://WinXp/WinXp/Sounds/Windows XP Notify.wav"
+dest_files=["res://.godot/imported/Windows XP Notify.wav-64a2a4df9d3d54e874031942dde99b23.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

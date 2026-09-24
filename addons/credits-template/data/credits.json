@@ -1,0 +1,61 @@
+{
+	"version": "0.0.1",
+	"velocity": 200.0,
+	"items": [
+		{
+			"type": "title",
+			"text": "HSH, Human Safety Hotline"
+		},
+		{
+			"type": "space",
+			"height": 50.0
+		},
+		{
+			"type": "title",
+			"text": "Thank you for playing my game"
+		},
+		{
+			"type": "space",
+			"height": 50.0
+		},
+		{
+			"type": "category",
+			"text": "Created By"
+		},
+		{
+			"type": "actor",
+			"actors": [
+				"Heather Dai"
+			]
+		},
+		{
+			"type": "space",
+			"height": 50.0
+		},
+		{
+			"type": "category",
+			"text": "Credits"
+		},
+		{
+			"type": "actor",
+			"actors": [
+				"User Interface Assets: Cup Nooble",
+				"Rolling Credits Template: Falme Streamless",
+				"Godot engine stable & various youtube tutorials I watched",
+				"And my stakeholders, peers and Ms Wilde."
+			]
+			},
+		{
+			"type": "space",
+			"height": 50.0
+		},
+		{
+			"type": "title",
+			"text":"Heather Dai Computer Science Project 2026"
+		},
+				{
+			"type": "space",
+			"height": 500.0
+		}
+	]
+}

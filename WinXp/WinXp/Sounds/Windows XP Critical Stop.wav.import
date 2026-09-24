@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dem4l73mfigyi"
+path="res://.godot/imported/Windows XP Critical Stop.wav-18ee262159cad362f184b84563a98584.sample"
+
+[deps]
+
+source_file="res://WinXp/WinXp/Sounds/Windows XP Critical Stop.wav"
+dest_files=["res://.godot/imported/Windows XP Critical Stop.wav-18ee262159cad362f184b84563a98584.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

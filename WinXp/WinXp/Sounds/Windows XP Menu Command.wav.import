@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b75w4s2wowc41"
+path="res://.godot/imported/Windows XP Menu Command.wav-408a585954a4c18e736439d6018b0043.sample"
+
+[deps]
+
+source_file="res://WinXp/WinXp/Sounds/Windows XP Menu Command.wav"
+dest_files=["res://.godot/imported/Windows XP Menu Command.wav-408a585954a4c18e736439d6018b0043.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

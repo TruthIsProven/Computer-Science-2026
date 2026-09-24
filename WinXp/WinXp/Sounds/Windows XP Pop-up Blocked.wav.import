@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://da4bi5d61ykxe"
+path="res://.godot/imported/Windows XP Pop-up Blocked.wav-e47bc5158d85d20ea1e1ce5c703a8ca3.sample"
+
+[deps]
+
+source_file="res://WinXp/WinXp/Sounds/Windows XP Pop-up Blocked.wav"
+dest_files=["res://.godot/imported/Windows XP Pop-up Blocked.wav-e47bc5158d85d20ea1e1ce5c703a8ca3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

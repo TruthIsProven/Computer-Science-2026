@@ -164,22 +164,25 @@ func _on_answer_button_pressed() -> void:
 	pass # Replace with function body.
 
 func check_player_answer() -> void:
-	
+
+	# Make sure the player actually selected an answer.
+	if option_button.selected == -1:
+		result_text.text = "Please select an answer."
+		$"Answer Result".visible = true
+		return
+
 	# Get the option the player selected.
-	var selected_answer = option_button.get_item_text(
-		option_button.selected
-	)
-	
+	var selected_answer = option_button.get_item_text(option_button.selected)
+
+	# Check whether it is correct.
 	var was_correct = selected_answer == active_call.answer
 
-	# Compare it with the correct answer.
-	if selected_answer == active_call.answer:
+	if was_correct:
 
 		print("CORRECT!")
 
 		correct_answers += 1
 		result_text.text = "CORRECT!\n\nGood job!"
-
 
 	else:
 
@@ -187,9 +190,10 @@ func check_player_answer() -> void:
 
 		wrong_answers += 1
 
-		result_text.text = "INCORRECT!\n\nThe correct answer was: " + active_call.answer + ""
+		result_text.text = "INCORRECT!\n\nThe correct answer was: " + active_call.answer
 
-		player_results.append({
+	# Record the result regardless of whether it was correct or wrong.
+	player_results.append({
 		"day": current_day,
 		"call": current_call,
 		"chosen_answer": selected_answer,
@@ -199,7 +203,7 @@ func check_player_answer() -> void:
 
 	# Close the answering panel.
 	$"Answering Panel".visible = false
-	
+
 	# Show the result.
 	$"Answer Result".visible = true
 	
@@ -246,19 +250,17 @@ func complete_day() -> void:
 	print("Correct answers: ", correct_answers)
 	print("Wrong answers: ", wrong_answers)
 
-
-	# Work out what the next day would be.
 	var next_day = current_day + 1
-
 	var next_day_name = "day_" + str(next_day)
 
-	# Check if the next day actually exists in calls.json.
 	if calls.has(next_day_name):
 
 		# Move to the next day.
 		current_day = next_day
-		# Go back to the first call.
 		current_call = 0
+
+		# Update the day display.
+		show_day_introduction()
 
 		# Hide the question.
 		$question_at_top_left.visible = false
@@ -267,17 +269,18 @@ func complete_day() -> void:
 		$MarginContainer/Start_button.visible = true
 
 		print("Ready for Day ", current_day)
-		show_day_introduction()
 
 	else:
 
 		# There are no more days.
 		print("GAME COMPLETE!")
+
 		$question_at_top_left.visible = false
 		$MarginContainer/Start_button.visible = false
-		
-		$game_ended.visible = true
- 
+
+		get_tree().change_scene_to_file("res://Ending_scene.tscn")
+
+
 func _on_continue_pressed() -> void:
 	
 	$"Answer Result".visible = false
@@ -285,7 +288,7 @@ func _on_continue_pressed() -> void:
 	go_to_next_call()
 	
 	pass # Replace with function body.
-	
+
 func show_day_introduction():
 	$Currentday.text = "DAY " + str(current_day)
 	

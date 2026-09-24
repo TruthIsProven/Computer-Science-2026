@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmbitylw1wv4h"
+path="res://.godot/imported/Windows XP Ringout.wav-2ca4172fad7d9f4083d44eda622c6e29.sample"
+
+[deps]
+
+source_file="res://WinXp/WinXp/Sounds/Windows XP Ringout.wav"
+dest_files=["res://.godot/imported/Windows XP Ringout.wav-2ca4172fad7d9f4083d44eda622c6e29.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
