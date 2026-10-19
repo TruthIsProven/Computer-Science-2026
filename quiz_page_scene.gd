@@ -24,14 +24,14 @@ var calls = {}
 var current_day = 1
 var current_call = 0
 
-var active_call: Call #Calling the class, using the class
+var active_call: Call #Calling the class, using the class complex technique
 
-var correct_answers = 0
+var correct_answers = 0 #Set some default values for later use
 var wrong_answers = 0
 
 var player_results = []
 
-func _ready() -> void:
+func _ready() -> void: #Func for function to first start running
 	print("GAME SCRIPT IS RUNNING")
 	
 	# Make sure the correct panels are visible.
