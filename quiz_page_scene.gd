@@ -3,26 +3,28 @@ extends Node2D
 @onready var option_button: OptionButton = $"Answering Panel/MarginContainer/MarginContainer/OptionButton"
 @onready var result_text: RichTextLabel =$"Answer Result/MarginContainer/NinePatchRect/MarginContainer/Result"
 
-class Call:
-	var caller_name: String
-	var caller_text: String
-	var question: String
-	var answer: String
+class Call: #This is complex technique 1 where I store the information into the class called calls
+	var caller_name: String # this is a string
+	var caller_text: String # this is also a string
+	var question: String  # this is another string
+	var answer: String  # this is yet one more string
 
-	func _init(data: Dictionary):
+# this is a comment
+
+	func _init(data: Dictionary): #This dictionary sorts the data stored in the JSON file into caller name, text, question and answer
 		caller_name = data.get("caller_name", "")
 		caller_text = data.get("caller_text", "")
 		question = data.get("question", "")
 		answer = data.get("answer", "")
 
-const CALL_FILE = "res://entries/calls.json"
+const CALL_FILE = "res://entries/calls.json" #This is complex technique 2 where I read the information off 
 
 var calls = {}
 
 var current_day = 1
 var current_call = 0
 
-var active_call: Call
+var active_call: Call #Calling the class, using the class
 
 var correct_answers = 0
 var wrong_answers = 0
@@ -43,11 +45,11 @@ func _ready() -> void:
 	load_calls()
 	show_day_introduction()
 
-func load_calls() -> void:
+func load_calls() -> void: #this function loads the calls from the JSON file 👍
 	
-	var file = FileAccess.open(CALL_FILE, FileAccess.READ)
+	var file = FileAccess.open(CALL_FILE, FileAccess.READ) #Opent he JSON file for calls
 	
-	if file == null:
+	if file == null: #Error prevention for if there are no calls
 		print("Could not find calls.json")
 		return
 	
@@ -57,7 +59,7 @@ func load_calls() -> void:
 	var json = JSON.new()
 	var error = json.parse(text)
 	
-	if error != OK:
+	if error != OK: #Error prevention
 		print("There is an error in calls.json")
 		return
 	
@@ -65,7 +67,7 @@ func load_calls() -> void:
 	
 	print("Calls loaded!")
 
-func _on_button_11_pressed() -> void:
+func _on_button_11_pressed() -> void: #This is what happens when the start button is pressed
 	
 	# Hide Start Day button.
 	$MarginContainer/Start_button.visible = false
@@ -74,7 +76,7 @@ func _on_button_11_pressed() -> void:
 	$Currentday.visible = true
 	_load_day_of_shift()
 
-func _load_day_of_shift() -> void:
+func _load_day_of_shift() -> void: #This loads the level that the player is on (e.g. first shift = level 1)
 	
 	var day_of_shift = [
 		"first shift",
@@ -87,7 +89,7 @@ func _load_day_of_shift() -> void:
 	
 	pass
 
-func _on_continue_from_day_pressed() -> void:
+func _on_continue_from_day_pressed() -> void: #This is the continue button from the show level page
 	$Day_of_shift.visible = false
 	$"Incoming Call".visible = true
 	

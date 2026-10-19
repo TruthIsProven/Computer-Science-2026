@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://addons/credits-template/prefabs/credits.tscn" id="2_utq03"]
 
-[sub_resource type="Gradient" id="Gradient_utq03"]
+[sub_resource type="Gradient" id="Gradient_gqjpd"]
 colors = PackedColorArray(0.15294118, 0.18039216, 0.21176471, 1, 0.15294118, 0.18039216, 0.21176471, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lpqq8"]
-gradient = SubResource("Gradient_utq03")
+gradient = SubResource("Gradient_gqjpd")
 
 [node name="CreditsExample" type="Node" unique_id=1709415300]
 

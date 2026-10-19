@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://dnmgo5esh6465"]
 
 [ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://addons/credits-template/prefabs/credits.tscn" id="1_1nibv"]
-[ext_resource type="Texture2D" uid="uid://b3e7k28jeojxf" path="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Setting menu.png" id="2_l7ruc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nibv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7ruc"]
+bg_color = Color(0.42903125, 0.42903128, 0.4290311, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vc5e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6rw2"]
+bg_color = Color(0.46929657, 0.46929657, 0.4692964, 1)
+
+[sub_resource type="Gradient" id="Gradient_utq03"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1nibv"]
+gradient = SubResource("Gradient_utq03")
 
 [node name="Node2D" type="Node2D" unique_id=1435799345]
 
 [node name="CreditsRoll" parent="." unique_id=272586721 instance=ExtResource("1_1nibv")]
+top_level = true
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -15,6 +31,7 @@ offset_bottom = 276.0
 
 [node name="game_ended" type="Control" parent="." unique_id=1035561390]
 visible = false
+top_level = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 961.0
@@ -26,15 +43,6 @@ layout_mode = 0
 offset_right = 961.0
 offset_bottom = 540.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="game_ended/MarginContainer" unique_id=1991159957]
-layout_mode = 2
-texture = ExtResource("2_l7ruc")
-region_rect = Rect2(139, 12, 106, 122)
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-
 [node name="MarginContainer" type="MarginContainer" parent="game_ended/MarginContainer" unique_id=1673617565]
 layout_mode = 2
 theme_override_constants/margin_left = 50
@@ -45,6 +53,8 @@ theme_override_constants/margin_bottom = 50
 [node name="Restart_game_button" type="Button" parent="game_ended/MarginContainer/MarginContainer" unique_id=611409309]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_1nibv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l7ruc")
 text = "Restart the game"
 
 [node name="MarginContainer2" type="MarginContainer" parent="game_ended/MarginContainer" unique_id=921370327]
@@ -59,6 +69,8 @@ theme_override_constants/margin_bottom = 50
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_5vc5e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y6rw2")
 text = "Exit game to desktop"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="game_ended" unique_id=1283027134]
@@ -80,6 +92,13 @@ text = "After careful consideration, we are sad to announce that you are fired :
 Thank you for playing my game!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="." unique_id=197895431]
+light_mask = 524288
+visibility_layer = 524288
+position = Vector2(480.00003, 271.35672)
+scale = Vector2(15.000001, 8.479898)
+texture = SubResource("GradientTexture2D_1nibv")
 
 [connection signal="credits_finished" from="CreditsRoll" to="CreditsRoll" method="_on_credits_finished"]
 [connection signal="pressed" from="game_ended/MarginContainer/MarginContainer/Restart_game_button" to="CreditsRoll" method="_on_restart_game_button_pressed"]
