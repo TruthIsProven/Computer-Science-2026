@@ -32,7 +32,7 @@ var wrong_answers = 0
 var player_results = []
 
 func _ready() -> void: #Func for function to first start running
-	print("GAME SCRIPT IS RUNNING")
+	#print("GAME SCRIPT IS RUNNING")
 	
 	# Make sure the correct panels are visible.
 	$"Incoming Call".visible = false
@@ -49,8 +49,8 @@ func load_calls() -> void: #this function loads the calls from the JSON file ðŸ‘
 	
 	var file = FileAccess.open(CALL_FILE, FileAccess.READ) #Opent he JSON file for calls
 	
-	if file == null: #Error prevention for if there are no calls
-		print("Could not find calls.json")
+	if file == null: #Error prevention for testing
+		#print("Could not find calls.json")
 		return
 	
 	var text = file.get_as_text()
@@ -59,13 +59,13 @@ func load_calls() -> void: #this function loads the calls from the JSON file ðŸ‘
 	var json = JSON.new()
 	var error = json.parse(text)
 	
-	if error != OK: #Error prevention
-		print("There is an error in calls.json")
+	if error != OK: #Error prevention for testing
+		#print("There is an error in calls.json")
 		return
 	
 	calls = json.data
 	
-	print("Calls loaded!")
+	#print("Calls loaded!")
 
 func _on_button_11_pressed() -> void: #This is what happens when the start button is pressed
 	
@@ -101,8 +101,8 @@ func load_current_call() -> void:
 	var day_name = "day_" + str(current_day)
 	
 	# Check if the day exists.
-	if not calls.has(day_name):
-		print("Day does not exist: ", day_name)
+	if not calls.has(day_name): #Error prevention for testing
+		#print("Day does not exist: ", day_name)
 		return
 	
 	# Get all calls for this day.
@@ -110,7 +110,7 @@ func load_current_call() -> void:
 	
 	# Check if there are any calls.
 	if current_call >= day_calls.size():
-		print("No more calls today.")
+		#print("No more calls today.") 
 		return
 	
 	# Get this specific call.
@@ -119,7 +119,7 @@ func load_current_call() -> void:
 	# Turn the JSON data into our Call class.
 	active_call = Call.new(call_data)
 	
-	print("Loaded caller: ", active_call.caller_name)
+	#print("Loaded caller: ", active_call.caller_name)
 
 
 func _on_pickup_call_pressed() -> void:
@@ -127,9 +127,9 @@ func _on_pickup_call_pressed() -> void:
 	$"Incoming Call".visible = false
 	$"Caller info".visible = true
 	
-	# Make sure we actually have a call.
+	# Make sure we actually have a call. Error prevention for testing
 	if active_call == null:
-		print("ERROR: No active call!")
+		#print("ERROR: No active call!")
 		return
 	
 	# Display the caller's text.
@@ -144,8 +144,6 @@ func _on_hold_pressed() -> void:
 	# Hide the caller information.
 	$"Caller info".visible = false
 	$question_at_top_left.visible = true
-	# Here we will eventually show the question.
-	# For now, print it so we know it works.
 	$question_at_top_left/Top_left_question_display.text = (
 	active_call.caller_name
 	+ "\n\n"
@@ -154,7 +152,6 @@ func _on_hold_pressed() -> void:
 
 	if active_call != null:
 		print("QUESTION: ", active_call.question)
-
 
 func _on_exitbutton_pressed() -> void:
 	$"Answering Panel".visible = false
@@ -241,16 +238,16 @@ func go_to_next_call() -> void:
 
 	else:
 
-		print("Day complete!")
+#		print("Day complete!")
 
 		complete_day()
 
-func complete_day() -> void:
+func complete_day() -> void: #Function when the day completes, adds to the values to keep record of player activity in game
 
-	print("DAY ", current_day, " COMPLETE")
+	#print("DAY ", current_day, " COMPLETE")
 
-	print("Correct answers: ", correct_answers)
-	print("Wrong answers: ", wrong_answers)
+	#print("Correct answers: ", correct_answers)
+	#print("Wrong answers: ", wrong_answers)
 
 	var next_day = current_day + 1
 	var next_day_name = "day_" + str(next_day)
@@ -270,12 +267,12 @@ func complete_day() -> void:
 		# Show Start Day.
 		$MarginContainer/Start_button.visible = true
 
-		print("Ready for Day ", current_day)
+		#print("Ready for Day ", current_day)
 
 	else:
 
 		# There are no more days.
-		print("GAME COMPLETE!")
+		#print("GAME COMPLETE!")
 
 		$question_at_top_left.visible = false
 		$MarginContainer/Start_button.visible = false

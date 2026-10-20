@@ -17,7 +17,7 @@ func _ready() -> void: #Function that calls the designated article in the JSON f
 		open_article("article_1")
 
 
-func load_wiki_articles() -> void:#function that loads the designated articles and show error message when the JSON file is not found
+func load_wiki_articles() -> void: #function that loads the designated articles and show error message when the JSON file is not found
 
 	var file := FileAccess.open(WIKI_FILE_PATH, FileAccess.READ)
 
@@ -73,7 +73,7 @@ func open_article(article_id: String) -> void: #Get the different part of the ar
 	rich_label.text = "[center]" + page_text + "[/center]"
 
 
-func _on_button_1_pressed() -> void:
+func _on_button_1_pressed() -> void: #buttons are self explanitory
 	open_article("article_1")
 
 
